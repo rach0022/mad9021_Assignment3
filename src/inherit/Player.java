@@ -1,3 +1,13 @@
+/*************************
+ *
+ *  @description The Player superclass used to make the PlayerV2 class
+ *
+ *  @author Ravi Chandra Rachamalla rach0022@algonquinlive.com
+ *
+ *  @version Mar 3, 2020
+ *
+ ***********************/
+
 package inherit;
 
 
@@ -11,8 +21,6 @@ import java.util.ArrayList;
 //hot dog like attributes we want to the sub class (the dachshund class)
 public class Player {
 
-    //these are not data members
-    //they are fields, which are data members
     protected final String HAS_AVATAR = "Yes"; //final is basically a constant
     protected final String NO_AVATAR = "No";
     protected final int MAX_SCORE = 5000000;
@@ -24,8 +32,8 @@ public class Player {
     protected final float MAX_EXPERIENCE = 100.0f;
     protected final float MIN_EXPERIENCE = 0.0f;
 
-
-    protected String name = "";
+    //these are not data members, these are fields
+    protected String name = "NOT ENTERED";
     protected String type = "Warrior";
     protected boolean avatar = false;
 

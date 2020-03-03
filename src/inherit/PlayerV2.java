@@ -1,3 +1,18 @@
+/*************************
+ *
+ *  @description The PlayerV2 subclass of the Player class
+ *
+ *  @author Ravi Chandra Rachamalla rach0022@algonquinlive.com
+ *
+ *  @version Mar 3, 2020
+ *
+ ***********************/
+
+//the package keyword in java allows us to denote that this class file is part of a bundle
+//of other java class files. This allows us to access the different methods or functions from
+//the other class files under specific namespaces allowing for us to either extend upon code or build
+//functionality for different objects to interact with each other. giving you the power to create large
+//complex programs with a clean and concise java class files allowing for more readable and robust code
 package inherit;
 
 import java.util.ArrayList;
@@ -13,6 +28,12 @@ public class PlayerV2 extends Player {
     //we need to the subclass as defined above
 
     //player 2 constant values
+    //the final keyword in java is used to denote that we need to create a new
+    //instance of an object or data type but that the same time we need this value to never change
+    //and be consistent throughout runtime, making it immutable. for example
+    // if we need to know the value of gravity of a specific area planet for the most part that stays the same
+    // so we could use the final keyword to say that final int GRAVITY = 1.00 so it doesnt get altered during runtime.
+    // the final keyword is similar to the const keyword in c++.
     protected final short MAX_STRENGTH = 200;
     protected final short MIN_STRENGTH = 0;
     protected final short MAX_WISDOM = 250;
@@ -22,13 +43,12 @@ public class PlayerV2 extends Player {
     protected final int MAX_CREDITS = 2000000;
     protected final int MIN_CREDITS = -1000000;
 
-
     //player2 protected fields
     protected short strength = 0;
     protected short wisdom = 1;
-    protected short weapons = 1;
-    protected int credits = 0; //no debt for initial value
-    protected String faction = "Light";
+    protected short weapons = 2; //start of with 2 weapons | 2 fists
+    protected int credits = 0; //no debt for newbies
+    protected String faction = "The Forgotten"; //self explanatory
 
 
     //the java arraylist keyword allows us to create an arraylist class
@@ -41,6 +61,11 @@ public class PlayerV2 extends Player {
 
     //empty constructors
     PlayerV2(){
+        //the super keyword in java allows us to refer to the super class of the class object we
+        //are working inside. in this example I am calling the constructor of the super class inside
+        //my default constructor for the PlayerV2 class because I can run all the code that instantiates
+        //the Player class and then add upon it whatever other code i need to run to make a new instance of a
+        //PlayerV2 object
         super();
         setValidFactions();
     }
@@ -61,6 +86,15 @@ public class PlayerV2 extends Player {
     protected void setValidFactions(){
         validFactions.add("Light");
         validFactions.add("Dark");
+        validFactions.add("Demons");
+        validFactions.add("Gods");
+        validFactions.add("Ancient Ones");
+        validFactions.add("Architects");
+        validFactions.add("Subterraneans");
+        validFactions.add("The Forgotten");
+        validFactions.add("Overlords");
+        validFactions.add("Sun Folk");
+        validFactions.add("Lunar Monks");
     }
 
     //overriding in java or any oop language allows a subclass to
@@ -77,13 +111,20 @@ public class PlayerV2 extends Player {
         System.out.println("Strength: \t" + strength);
         System.out.println("Wisdom: \t" + wisdom);
         System.out.println("Weapons: \t" + weapons);
-
     }
 
     //return the title of the player = name + the player type
     public String getTitle(){
         return  this.name + " " + this.type;
     }
+    //this is java allows us to refer to the specific instance of an object.
+    //to actually use any of the code from our java class we wil create an instance of it
+    //in some other class or main function using the new CLASSNAME  keyword. inside the class file
+    //if we ever want to refer to properties of one specific instance of an object we can use the this keyword
+    //to access its data fields or methods which allows us to keep our code more organized as well as say
+    //we ever create a function where a player battles another player. both player objects have the same
+    //data field names so writing say if( strength > strength) would get confusing as to whats its referring to
+    //so instead we can access the specific namespace of this object instance by instead saying this.strength > strength
 
     //getters
     public String getFaction() { return faction; }
