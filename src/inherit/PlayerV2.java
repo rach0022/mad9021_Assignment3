@@ -30,6 +30,12 @@ public class PlayerV2 extends Player {
     protected int credits = 0; //no debt for initial value
     protected String faction = "Light";
 
+
+    //the java arraylist keyword allows us to create an arraylist class
+    //compared to the normal array class, we have most of the same array functionality
+    //with the added functionality of a dynamic list interface. For example we can add and remove elements
+    //after the array is made and it will dynamically size to fit them. It is similar to the vector interface
+    //from c++
     protected ArrayList<String> validFactions = new ArrayList<String>();
     //ADD FACTIONS LIGHT AND DARK ARRAY LIST STRING VALID FACTIONS
 
@@ -57,6 +63,13 @@ public class PlayerV2 extends Player {
         validFactions.add("Dark");
     }
 
+    //overriding in java or any oop language allows a subclass to
+    //tweak or enhance a specific method that is provided by the super class
+    //allowing for a more precise implementation of that method based on your needs
+    //for example we have the output method already provided below from the super class
+    //but it does not have our new data fields so I can override the method allowing
+    //for the normal implementation to occur by calling the super.output() version of the method
+    //and then add the extra system out calls for all my new data fields created in the sub class
     @Override
     public void output() {
         super.output();
