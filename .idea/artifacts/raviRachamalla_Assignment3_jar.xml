@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="raviRachamalla-Assignment3:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/raviRachamalla_Assignment3_jar</output-path>
+    <root id="archive" name="raviRachamalla-Assignment3.jar">
+      <element id="module-output" name="PlayerSuperClass" />
+      <element id="module-source" name="PlayerSuperClass" />
+    </root>
+  </artifact>
+</component>
