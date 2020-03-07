@@ -44,8 +44,8 @@ public class PlayerV2 extends Player {
     protected final int MIN_CREDITS = -1000000;
 
     //player2 protected fields
-    protected short strength = 0;
-    protected short wisdom = 1;
+    protected short strength = 10;
+    protected short wisdom = 15;
     protected short weapons = 2; //start of with 2 weapons | 2 fists
     protected int credits = 0; //no debt for newbies
     protected String faction = "The Forgotten"; //self explanatory
@@ -138,7 +138,7 @@ public class PlayerV2 extends Player {
     public void setFaction(String faction) {
         for(String s: validFactions){
             if(s.equalsIgnoreCase(faction)){
-                this.faction = faction;
+                this.faction = s;
                 break;
             }
         }

@@ -13,7 +13,7 @@ package inherit;
 public class Main {
     public static void main(String[] args) {
 //        Player p1 = new Player();
-//        Player p2 = new Player("Ravi", "Viking", false, 32433, (short) 88, (short) 18, 23.7f);
+//        Player p2 = new Player("Grodin", "Viking", false, 32433, (short) 88, (short) 18, 23.7f);
 //        p1.setName("Jacobian Jones");
 //        p1.output();
 //        p2.output();
@@ -23,10 +23,10 @@ public class Main {
         //this allows us to then use that instance of the object to run whatever code or functions
         //we need it for. The class file itself is not enough as we need to create the new instance of it first
         PlayerV2 p3 = new PlayerV2();
-        PlayerV2 p4 = new PlayerV2("Derkins", "MerCENarY", true, 45312, (short) 10, (short) 700, 55.8f, "Dark", (short) 180, (short) 89, (short) 5, -3242342);
+        PlayerV2 p4 = new PlayerV2("Nyarlathotep", "rEbEL", true, 45312, (short) 10, (short) 700, 55.8f, "ANCient ONES", (short) 180, (short) 89, (short) 5, -3242342);
         p3.output();
         p4.output();
-        System.out.println(p3.getTitle());
+        System.out.println("\n" + p3.getTitle());
         System.out.println(p4.getTitle());
     }
 }
